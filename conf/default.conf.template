@@ -1,4 +1,3 @@
 # Place custom configuration for your glint cluster in here
 glint.master.host   = "127.0.0.1"
 glint.master.port   = 13370
-

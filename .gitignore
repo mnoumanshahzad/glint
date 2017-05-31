@@ -19,3 +19,9 @@ site/
 .scala_dependencies
 .worksheet
 .idea
+
+# Others
+/metastore_db
+conf/servers
+conf/default.conf
+conf/env.sh
