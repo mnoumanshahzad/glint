@@ -108,11 +108,5 @@ git.remoteRepo := "git@github.com:rjagerman/glint.git"
 site.includeScaladoc()
 
 assemblyShadeRules in assembly := Seq(
-    ShadeRule.rename("akka.**" -> "akka_2_4_12_shade.@1")
-    .inLibrary("com.typesafe.akka" % "akka-actor_2.11" % "2.4.12")
-    .inLibrary("com.typesafe.akka" % "akka-remote_2.11" % "2.4.12")
-    .inLibrary("com.typesafe.akka" % "akka-testkit_2.11" % "2.4.12")
-    .inLibrary("com.typesafe.akka" % "akka-protobuf_2.11" % "2.4.12")
-    .inLibrary("com.typesafe.akka" % "akka-stream_2.11" % "2.4.12")
-    .inAll
+    ShadeRule.rename("akka.**" -> "akka_2_4_12_shade.@1").inAll
 )
