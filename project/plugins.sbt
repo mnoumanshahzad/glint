@@ -1,6 +1,6 @@
 addSbtPlugin("org.xerial.sbt" % "sbt-pack" % "0.7.5")
 
-addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.4")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.13.0")
 
 resolvers += "jgit-repo" at "http://download.eclipse.org/jgit/maven"
 

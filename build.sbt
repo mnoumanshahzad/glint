@@ -13,17 +13,17 @@ fork in Test := true
 // Akka
 
 libraryDependencies <+= scalaVersion {
-  case x if x.startsWith("2.11") && System.getProperty("java.version") > "1.8" => "com.typesafe.akka" %% "akka-actor" % "2.4.12"
+  case x if x.startsWith("2.11") && System.getProperty("java.version") > "1.8" => "com.data-artisans" %% "flakka-actor" % "2.3-custom"
   case _ => "com.typesafe.akka" %% "akka-actor" % "2.3.15"
 }
 
 libraryDependencies <+= scalaVersion {
-  case x if x.startsWith("2.11") && System.getProperty("java.version") > "1.8" => "com.typesafe.akka" %% "akka-remote" % "2.4.12"
+  case x if x.startsWith("2.11") && System.getProperty("java.version") > "1.8" => "com.data-artisans" %% "flakka-remote" % "2.3-custom"
   case _ => "com.typesafe.akka" %% "akka-remote" % "2.3.15"
 }
 
 libraryDependencies <+= scalaVersion {
-  case x if x.startsWith("2.11") && System.getProperty("java.version") > "1.8" => "com.typesafe.akka" %% "akka-testkit" % "2.4.12"
+  case x if x.startsWith("2.11") && System.getProperty("java.version") > "1.8" => "com.data-artisans" %% "flakka-testkit" % "2.3-custom"
   case _ => "com.typesafe.akka" %% "akka-testkit" % "2.3.15"
 }
 
@@ -107,6 +107,3 @@ git.remoteRepo := "git@github.com:rjagerman/glint.git"
 
 site.includeScaladoc()
 
-assemblyShadeRules in assembly := Seq(
-    ShadeRule.rename("akka.**" -> "akka_2_4_12_shade.@1").inAll
-)
