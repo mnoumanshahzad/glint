@@ -31,3 +31,32 @@ Rolf Jagerman, Carsten Eickhoff. **"Web-scale Topic Models in Spark: An Asynchro
       journal={arXiv preprint arXiv:1605.07422},
       year={2016}
     }
+    
+##Others
+
+Glint Path Variables Initialization Hierachy
+    
+    GLINT_SBIN_PATH
+        - configuration.sh
+            - paths.sh
+            - /conf/env.sh
+
+To Start Glint
+    
+    ./sbin/start-master.sh
+    ./sbin/start-server.sh
+    
+To Use Glint with Flink Scala REPL
+
+    ./flink/bin/start.local.sh
+    ./flink/bin/start-scala-shell.sh local -a GLINT_JAR_PATH
+    
+Glint dependency archetype (for use with Maven/SBT)
+
+    groupID: ch.ethz.inf.da
+    artifactID: glint
+    version: 0.1-SNAPSHOT
+
+To install Glint as a Maven dependency
+
+    mvn install:install-file -Dfile:<path-to-jar-file> -DpomFile=<path-to-pomfile>
