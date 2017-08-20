@@ -36,7 +36,8 @@ private[glint] abstract class PartialVector[@specialized V: Semiring : ClassTag]
     var i = 0
     while (i < keys.length) {
       val key = partition.globalToLocal(keys(i))
-      data(key) += values(i)
+      data(key) = values(i)
+      //data(key) += values(i) Originally used to aggregate values in a model
       i += 1
     }
     true

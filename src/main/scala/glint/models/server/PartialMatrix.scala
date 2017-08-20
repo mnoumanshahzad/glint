@@ -76,7 +76,8 @@ private[glint] abstract class PartialMatrix[@specialized V: Semiring : ClassTag]
     while (i < rows.length) {
       val row = partition.globalToLocal(rows(i))
       val col = cols(i)
-      data(row)(col) += values(i)
+      data(row)(col) = values(i)
+      //data(row)(col) += values(i) Originally used to aggregate values in a model
       i += 1
     }
     true
